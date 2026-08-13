@@ -3,6 +3,8 @@
   "displayName": "Copilot Limiter",
   "description": "Restrict Copilot Agent subagents to one selected language model.",
   "version": "0.0.1",
+  "publisher": "karugaru",
+  "icon": "icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
