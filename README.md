@@ -7,7 +7,7 @@ Copilot Limiter is a VS Code extension that pins the subagents invoked by VS Cod
 - Select an available Copilot model with `Copilot Limiter: Select Subagent Model`
 - Save the selected model ID and qualified name as the policy for `runSubagent`
 - Rewrite `runSubagent`'s `tool_input.model` to the selected model with the `PreToolUse` hook in `.github/hooks/copilot-limiter.json`
-- Audit launched subagents with the `SubagentStart` hook and record them in `.copilot-limiter/runSubagent-audit.jsonl`
+- Audit launched subagents with the `SubagentStart` hook and record them in `.github/copilot-limiter/runSubagent-audit.jsonl`
 
 ## Requirements
 
@@ -43,7 +43,7 @@ Agent hooks are a Preview feature. Because `SubagentStart` cannot change the mod
 
 If the hook is not loaded or the `runSubagent` input is not an object, the hook rejects the request instead of guessing a model and executing it. This enforcement path is unavailable in environments where Agent hooks are disabled by organizational policy.
 
-To disable the generated hook, delete `.github/hooks/copilot-limiter.json` and, if necessary, `.copilot-limiter`.
+To disable the generated hook, delete `.github/hooks/copilot-limiter.json` and, if necessary, `.github/copilot-limiter`.
 
 ## API Limitations
 

@@ -8,12 +8,12 @@ const SELECT_MODEL_COMMAND = 'copilot-limiter.selectSubagentModel';
 const APPLY_POLICY_COMMAND = 'copilot-limiter.applyModelPolicy';
 const SHOW_STATUS_COMMAND = 'copilot-limiter.showPolicyStatus';
 const COPILOT_VENDOR = 'copilot';
-const POLICY_DIRECTORY = '.copilot-limiter';
+const POLICY_DIRECTORY = '.github/copilot-limiter';
 const POLICY_FILE = 'model-policy.json';
 const HOOK_DIRECTORY = '.github/hooks';
 const HOOK_CONFIGURATION_FILE = 'copilot-limiter.json';
 const HOOK_SCRIPT_FILE = 'copilot-limiter-hook.mjs';
-const HOOK_COMMAND = 'node .copilot-limiter/copilot-limiter-hook.mjs';
+const HOOK_COMMAND = 'node .github/copilot-limiter/copilot-limiter-hook.mjs';
 
 interface ConfiguredModel {
     readonly id: string;

@@ -7,7 +7,7 @@ Copilot Limiter は、VS Code の Copilot Agent が呼び出すサブエージ�
 - `Copilot Limiter: Select Subagent Model` で利用可能な Copilot モデルを選択
 - 選択したモデルの ID と qualified name を runSubagent 用のポリシーへ保存
 - `.github/hooks/copilot-limiter.json` の `PreToolUse` hook で `runSubagent` の `tool_input.model` を選択モデルへ書き換え
-- `SubagentStart` hook で起動されたサブエージェントを監査し、`.copilot-limiter/runSubagent-audit.jsonl` に記録
+- `SubagentStart` hook で起動されたサブエージェントを監査し、`.github/copilot-limiter/runSubagent-audit.jsonl` に記録
 
 ## 必要条件
 
@@ -43,7 +43,7 @@ Agent hooks は Preview 機能です。`SubagentStart` 自体はモデルを変�
 
 hook が読み込まれていない場合や、`runSubagent` の入力がオブジェクトでない場合は、モデルを推測して実行せず拒否します。組織ポリシーで Agent hooks が無効化されている環境では、この経路の強制は使えません。
 
-hook を生成した後に無効化するには、`.github/hooks/copilot-limiter.json` を削除し、必要に応じて `.copilot-limiter` を削除してください。
+hook を生成した後に無効化するには、`.github/hooks/copilot-limiter.json` を削除し、必要に応じて `.github/copilot-limiter` を削除してください。
 
 ## API の制約
 
