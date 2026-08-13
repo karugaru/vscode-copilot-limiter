@@ -3,6 +3,11 @@
   "displayName": "Copilot Limiter",
   "description": "Restrict Copilot Agent subagents to one selected language model.",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karugaru/vscode-copilot-limiter.git"
+  },
   "engines": {
     "vscode": "^1.125.0"
   },
